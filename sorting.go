@@ -35,7 +35,6 @@ func filterAndSortDefault(a []int) {
 				visited[val] = struct{}{}
 			}
 		}
-
 	}
 	sort.Ints(accumulator)
 }
@@ -43,7 +42,6 @@ func filterAndSortDefault(a []int) {
 func filterAndSortZermelo(a []int) {
 	visited := make(map[int]struct{}, 0)
 	accumulator := make([]int, 0)
-
 	var x, y int
 	for i := 0; i < 10; i++ {
 		x = 1 + y
@@ -54,7 +52,6 @@ func filterAndSortZermelo(a []int) {
 				visited[val] = struct{}{}
 			}
 		}
-
 	}
 	zermelo.Sort(accumulator)
 }
@@ -93,7 +90,7 @@ func filterAndContinuousSortZermelo(a []int) {
 	}
 }
 
-func filterAndContinuousSortHeap(a []int) {
+func filterAndSortHeap(a []int) {
 	visited := make(map[int]struct{}, 0)
 	h := &minheap.IntHeap{}
 	heap.Init(h)
@@ -114,8 +111,8 @@ func filterAndContinuousSortHeap(a []int) {
 	}
 }
 
-func filterAndContinuousSortTree(a []int) {
-	tr := btree.New(100)
+func filterAndSortTree(a []int) {
+	tr := btree.New(10)
 	var x, y int
 	for i := 0; i < 10; i++ {
 		x = 1 + y

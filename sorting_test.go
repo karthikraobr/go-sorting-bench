@@ -11,10 +11,10 @@ func BenchmarkEverything(b *testing.B) {
 	}{
 		{name: "filterAndSortOnceDefault", f: filterAndSortDefault},
 		{name: "filterAndSortOnceZermelo", f: filterAndSortZermelo},
-		{name: "FilterAndContinuousSortDefault", f: filterAndContinuousSortDefault},
-		{name: "FilterAndContinuousSortZermelo", f: filterAndContinuousSortZermelo},
-		{name: "heap", f: filterAndContinuousSortHeap},
-		{name: "btree", f: filterAndContinuousSortTree},
+		{name: "filterAndContinuousSortDefault", f: filterAndContinuousSortDefault},
+		{name: "filterAndContinuousSortZermelo", f: filterAndContinuousSortZermelo},
+		{name: "heap", f: filterAndSortHeap},
+		{name: "btree", f: filterAndSortTree},
 	}
 
 	a := foo()
